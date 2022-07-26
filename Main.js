@@ -1,6 +1,5 @@
 const express = require('express');
 const server = express();
-const env = require('env');
 const config = require('./config/config.json');
 const os = require('os');
 const path = require('path');
