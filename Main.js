@@ -3,10 +3,14 @@ const server = express();
 const env = require('env');
 const config = require('./config/config.json');
 const os = require('os');
+const path = require('path');
+const PublicDirectory = path.join(__dirname, './Public');
 
 Startup();
 
-server.use('/', require('./routes/pages.js'))
+server.use('/', require('./routes/pages.js'));
+server.use(express.static(PublicDirectory));
+server.set('view engine', 'hbs');
 
 function Startup() {
     console.log("");
