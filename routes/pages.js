@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const config = require('./config/config.json');
+const config = require('../config/config.json');
 
 router.get('/', (req,res) => {
     console.log(`${req.ip} requested ${req.url}`);
