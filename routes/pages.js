@@ -7,7 +7,7 @@ router.get('/', (req,res) => {
     res.render('index.hbs');
 });
 
-router.post('/Plan/', (req,res) => {
+router.post('/plan/', (req,res) => {
     var ReqData = req.body;
     console.log(`Request has been made: ${ReqData}`);
     
